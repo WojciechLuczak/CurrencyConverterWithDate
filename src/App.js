@@ -11,17 +11,8 @@ function App() {
           <h1 className="formContainer__title">Kalkulator Walut</h1>
           <div className="form">
           <MoneyToConvert />
-
-            <label className="form__label" for="from">
-              Z:
-            </label>
-            <CurrencyChooser />
-
-            <label className="form__label" for="to">
-              Na:
-            </label>
-            <CurrencyChooser />
-
+            <CurrencyChooser title="Z" target="from"/>
+            <CurrencyChooser title="Na" target="to"/>
             <Button />
           </div>
 
