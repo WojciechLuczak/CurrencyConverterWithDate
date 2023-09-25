@@ -1,6 +1,7 @@
 import React from "react";
 import CurrencyChooser from "./CurrencyChooser";
 import MoneyToConvert from "./MoneyToConvert";
+import Button from "./Button";
 
 function App() {
   return (
@@ -21,9 +22,7 @@ function App() {
             </label>
             <CurrencyChooser />
 
-            <button className="form__button" onclick="convert()">
-              Przelicz
-            </button>
+            <Button />
           </div>
 
           <div id="result" className="result"></div>
