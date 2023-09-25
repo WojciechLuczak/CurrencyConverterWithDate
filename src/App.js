@@ -6,11 +6,8 @@ function App() {
   return (
     <div>
       <div className="backgroundContainer">
-        <div className="formContainer">
           <Form />
-
           <Result />
-        </div>
       </div>
     </div>
   );

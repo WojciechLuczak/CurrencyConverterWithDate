@@ -7,6 +7,7 @@ import Button from "./Button";
 const Form = () => {
     return (
       <div>
+        <div className="formContainer">
         <h1 className="formContainer__title">Kalkulator Walut</h1>
           <div className="form">
           <MoneyToConvert />
@@ -14,6 +15,8 @@ const Form = () => {
             <CurrencyChooser title="Na" target="to"/>
             <Button />
           </div>
+        </div>
+        
       </div>
     );
   };
