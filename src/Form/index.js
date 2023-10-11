@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
+import {Clock} from "./Clock";
 
 const Form = () => {
   const [amount, setAmount] = useState(0);
@@ -60,7 +61,9 @@ const Form = () => {
 
   return (
     <div className="backgroundContainer">
+      
       <div className="formContainer">
+      <Clock />
         <h1 className="formContainer__title">Kalkulator Walut</h1>
         <div className="form">
           <label className="form__label" htmlFor="amount">
