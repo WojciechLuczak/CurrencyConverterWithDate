@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: rgb(236, 236, 236);
+  margin: none;
+}
+
+.backgroundContainer {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #db9e3e, #ffe25e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
