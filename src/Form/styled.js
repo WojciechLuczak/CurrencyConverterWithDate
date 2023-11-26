@@ -1,11 +1,7 @@
 import styled from 'styled-components';
 
 export const BackgroundContainer = styled.div`
-  background-color: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  /* Add any global styles for the background container */
 `;
 
 export const FormContainer = styled.div`
@@ -44,7 +40,13 @@ export const FormInput = styled.input`
 `;
 
 export const FormSelect = styled.select`
-  ${FormInput} /* Reuse styles from FormInput */
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 `;
 
 export const Result = styled.div`

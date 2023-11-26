@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
-import './style.css';
-import {Clock} from "./Clock";
+import { Clock } from './Clock';
+import {
+  BackgroundContainer,
+  FormContainer,
+  FormTitle,
+  FormElement,
+  FormLabel,
+  FormInput,
+  FormSelect,
+  Result,
+  FormButton,
+} from './styled.js';
 
 const Form = () => {
   const [amount, setAmount] = useState(0);
@@ -38,7 +48,7 @@ const Form = () => {
             return 1;
         }
       default:
-        return 1; // Default rate when unknown currencies are used
+        return 1;
     }
   };
 
@@ -60,53 +70,53 @@ const Form = () => {
   };
 
   return (
-    <div className="backgroundContainer">
-      
-      <div className="formContainer">
-      <Clock />
-        <h1 className="formContainer__title">Kalkulator Walut</h1>
-        <div className="form">
-          <label className="form__label" htmlFor="amount">
-            Kwota:
-          </label>
-          <input
-            className="form__input"
+    <BackgroundContainer>
+      <FormContainer>
+        <Clock />
+        <FormTitle>Kalkulator Walut</FormTitle>
+        <FormElement>
+          <FormLabel htmlFor="amount">Kwota:</FormLabel>
+          <FormInput
             type="number"
             id="amount"
             placeholder="tutaj wpisz kwote do przeliczenia"
             value={amount}
             onChange={(e) => setAmount(parseFloat(e.target.value))}
           />
+        </FormElement>
 
-          <label className="form__label" htmlFor="from">
-            Z:
-          </label>
-          <select className="form__select" id="from" value={from} onChange={(e) => setFrom(e.target.value)}>
+        <FormElement>
+          <FormLabel htmlFor="from">Z:</FormLabel>
+          <FormSelect
+            id="from"
+            value={from}
+            onChange={(e) => setFrom(e.target.value)}
+          >
             <option value="PLN">PLN</option>
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
-          </select>
+          </FormSelect>
+        </FormElement>
 
-          <label className="form__label" htmlFor="to">
-            Na:
-          </label>
-          <select className="form__select" id="to" value={to} onChange={(e) => setTo(e.target.value)}>
+        <FormElement>
+          <FormLabel htmlFor="to">Na:</FormLabel>
+          <FormSelect
+            id="to"
+            value={to}
+            onChange={(e) => setTo(e.target.value)}
+          >
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="PLN">PLN</option>
-          </select>
+          </FormSelect>
+        </FormElement>
 
-          <button className="form__button" onClick={convertCurrency}>
-            Przelicz
-          </button>
-        </div>
+        <FormButton onClick={convertCurrency}>Przelicz</FormButton>
 
-        <div id="result" className="result">
-          {result}
-        </div>
-      </div>
-    </div>
+        <Result>{result}</Result>
+      </FormContainer>
+    </BackgroundContainer>
   );
 };
 
-export default Form; 
+export default Form;
